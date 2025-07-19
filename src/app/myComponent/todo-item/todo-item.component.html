@@ -1,0 +1,21 @@
+<div class=" text-center ">
+
+    <div class="text-center   items-center  flex flex-col gap-3 animate-pulse ">
+        
+        <p class="font-bold text-red-500">{{todo.sno}}</p>
+        <p class="font-extrabold text-2xl text-orange-500" [ngClass]="{'strike':!todo.active}">{{todo.title}}</p>
+    <p class="font-medium" [ngClass]="{'strike':!todo.active}">{{todo.desc}}</p>
+    <!-- <p>{{todo.active}}</p> -->
+     <div class="div">
+
+         <input type="checkbox" class="form-check-input"  (click)="onCheckboxClick(todo) " [checked]="!todo.active"/>
+         <label class="form-check-label " for="exampleCheck1"> Done</label>
+        </div>
+
+    <button class="bg-red-500 cursor-pointer text-white rounded-md p-1  " (click)="onClick(todo)">Delete</button>
+   
+</div>
+<div class="div text-gray-600">--------------------------------------------------------------</div>
+
+
+</div>
